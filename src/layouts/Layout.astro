@@ -4,23 +4,55 @@ import '../styles/global.css';
 interface Props {
 	title: string;
     description?: string;
+    image?: string;
+    type?: 'website' | 'article';
 }
 
-const { title, description = "Pusat les privat di Surabaya dengan pendekatan personal." } = Astro.props;
+const { 
+    title, 
+    description = "Pusat les privat di Surabaya dengan pendekatan personal, waktu fleksibel, dan tutor berkualitas.",
+    image,
+    type = "website"
+} = Astro.props;
+
+const defaultImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80";
+const finalImage = image || defaultImage;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://privatsurabaya.com');
 ---
 
 <!doctype html>
 <html lang="id">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<title>{title}</title>
+		
+        <!-- SEO -->
+        <title>{title}</title>
+		<meta name="description" content={description} />
+
+        <link rel="canonical" href={canonicalURL} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={finalImage} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={finalImage} />
 	</head>
 	<body class="font-sans antialiased text-slate-600 bg-white flex flex-col min-h-screen">
 		<slot />
