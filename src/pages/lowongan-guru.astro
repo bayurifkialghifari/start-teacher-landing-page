@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Layout title="Lowongan Guru - Privat Surabaya" description="Bergabunglah sebagai mitra pengajar di Privat Surabaya.">
+    <Header />
+    
+    <PageBanner 
+        title="Karir / Lowongan" 
+        subtitle="Bergabunglah menjadi bagian dari perubahan positif."
+        image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    />
+
+    <Breadcrumb items={[{ label: 'Lowongan Guru', href: '/lowongan-guru', current: true }]} />
+
+    <main class="flex-grow">
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">
+                        Karir di Privat Surabaya
+                    </span>
+                    <h1 class="text-4xl font-bold text-secondary mb-6">Bergabunglah Sebagai Mitra Pengajar</h1>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-10">
+                        Kami mengundang Anda, para pendidik dan profesional yang memiliki passion dalam mengajar, untuk bergabung dan tumbuh bersama kami dalam mencerdaskan bangsa.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Kriteria Umum:</h2>
+                        <ul class="space-y-3 mb-8 text-slate-600">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Mahasiswa aktif atau lulusan S1/S2 Perguruan Tinggi Negeri (PTN) ternama.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Memiliki IPK minimal 3.00.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Menguasai materi pelajaran yang akan diajarkan.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Memiliki pengalaman mengajar (lebih diutamakan).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Jujur, disiplin, bertanggung jawab, dan komunikatif.</span>
+                            </li>
+                        </ul>
+                        <div class="bg-primary/5 rounded-2xl p-6 border border-primary/20">
+                            <h3 class="font-bold text-primary mb-2">Benefit Bergabung:</h3>
+                            <p class="text-sm text-slate-600">Jadwal fleksibel, fee kompetitif, pengalaman mengajar yang berharga, dan jaringan profesional.</p>
+                        </div>
+                    </div>
+                    <div>
+                         <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Teacher" class="rounded-2xl shadow-xl w-full">
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-secondary mb-6">Siap Menginspirasi?</h2>
+                    <a href="https://wa.me/6282366879000?text=Halo%20Admin,%20saya%20tertarik%20mendaftar%20sebagai%20guru%20privat" class="inline-flex justify-center items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-sky-600 transition shadow-lg">
+                        Daftar Sekarang via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

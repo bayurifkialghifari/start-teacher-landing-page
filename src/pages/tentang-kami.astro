@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Layout title="Tentang Kami - Privat Surabaya" description="Tentang Privat Surabaya - Pusat les privat profesional dengan pendekatan personal.">
+    <Header />
+    
+    <PageBanner 
+        title="Tentang Kami" 
+        subtitle="Mengenal lebih dekat visi dan misi Privat Surabaya."
+        image="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    />
+
+    <Breadcrumb items={[{ label: 'Tentang Kami', href: '/tentang-kami', current: true }]} />
+
+    <main class="flex-grow">
+        <!-- About Section Content -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl font-bold text-secondary mb-6">Tentang Privat Surabaya</h1>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+                        Di tengah banyaknya pilihan layanan les privat, Privat Surabaya hadir sebagai solusi terpercaya untuk kebutuhan belajar Anda. Kami tidak sekadar menyediakan guru, tapi membangun pengalaman belajar yang berkualitas, personal, dan berdampak nyata.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-start mb-20">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary to-blue-600 rounded-2xl opacity-20 blur-lg rotate-2"></div>
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Students learning" class="relative rounded-2xl shadow-xl w-full object-cover h-[500px]">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-secondary mb-6">Mengapa Kami Pilihan Tepat?</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-primary">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-semibold text-secondary mb-2">Guru Berkualitas dan Terverifikasi</h3>
+                                    <p class="text-slate-600">Setiap guru yang bergabung telah melalui proses seleksi ketat, memiliki pengalaman mengajar, dan latar belakang pendidikan yang solid. Kami memastikan Anda mendapatkan pendamping belajar yang tepat dan profesional.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-semibold text-secondary mb-2">Les Privat yang Sepenuhnya Disesuaikan</h3>
+                                    <p class="text-slate-600">Kami memahami bahwa setiap siswa memiliki gaya belajar dan kebutuhan yang berbeda. Layanan kami dirancang personal dan fleksibel, menyesuaikan materi, metode, serta waktu belajar sesuai kebutuhan Anda.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-semibold text-secondary mb-2">Layanan Les ke Rumah atau Online</h3>
+                                    <p class="text-slate-600">Privat Surabaya menyediakan layanan les privat langsung ke rumah Anda atau secara online sesuai kenyamanan Anda. Kemudahan ini memastikan proses belajar tetap optimal tanpa mengganggu aktivitas harian.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-semibold text-secondary mb-2">Fleksibilitas Waktu</h3>
+                                    <p class="text-slate-600">Belajar bisa dilakukan kapan saja—pagi, siang, sore, bahkan malam—sesuai kesepakatan dengan guru. Ini sangat cocok untuk siswa dengan jadwal padat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-3xl p-10 lg:p-16 text-center">
+                    <h2 class="text-3xl font-bold text-secondary mb-6">Siap Meningkatkan Prestasi Anda?</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
+                        Bergabunglah bersama ratusan siswa lainnya yang telah merasakan manfaat nyata belajar bersama Privat Surabaya. Kami hadir untuk membantu Anda belajar lebih fokus, lebih nyaman, dan lebih percaya diri.
+                    </p>
+                    <a href="/kontak" class="inline-flex justify-center items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-sky-600 transition shadow-lg">
+                        Hubungi Kami Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

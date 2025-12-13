@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+[x-cloak] { display: none !important; }
+
+.hero-bg {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Custom fonts configuration might be needed in Astro config or CSS theme if not using CDN */
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-primary: #0ea5e9;
+  --color-secondary: #0f172a;
+  --color-accent: #eab308;
+}

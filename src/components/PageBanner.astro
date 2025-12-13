@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+	subtitle?: string;
+    image?: string;
+}
+
+const { title, subtitle, image = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" } = Astro.props;
+---
+
+<div class="relative bg-secondary pt-32 pb-16">
+    <div class="absolute inset-0 overflow-hidden">
+         <img src={image} alt="Background" class="w-full h-full object-cover opacity-10">
+         <div class="absolute inset-0 bg-secondary/50 mix-blend-multiply"></div>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{title}</h1>
+        {subtitle && <p class="text-lg text-slate-300 max-w-2xl mx-auto">{subtitle}</p>}
+    </div>
+</div>

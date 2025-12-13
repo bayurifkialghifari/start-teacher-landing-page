@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Layout title="Berita - Privat Surabaya" description="Berita dan tips terbaru seputar pendidikan.">
+    <Header />
+    
+    <PageBanner 
+        title="Berita & Artikel" 
+        subtitle="Informasi dan tips terbaru seputar dunia pendidikan."
+        image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    />
+
+    <Breadcrumb items={[{ label: 'Berita', href: '/berita', current: true }]} />
+
+    <main class="flex-grow">
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl font-bold text-secondary mb-4">Berita Terbaru</h1>
+                    <p class="text-slate-600 max-w-2xl mx-auto">Ikuti perkembangan terbaru dan artikel bermanfaat seputar pendidikan.</p>
+                </div>
+                <!-- News Grid from Index -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Blog Thumb" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-sm font-semibold mb-2 block">Tips Belajar</span>
+                            <h3 class="text-lg font-bold text-secondary mb-2 hover:text-primary transition"><a href="#">Cara Optimalkan Nilai Rapor SNBP</a></h3>
+                            <p class="text-slate-500 text-sm mb-4">Strategi efektif meningkatkan nilai rapor untuk lolos seleksi masuk perguruan tinggi.</p>
+                            <a href="#" class="text-sm font-medium text-slate-400 hover:text-primary transition flex items-center">Baca Selengkapnya <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 bg-slate-200">
+                             <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Blog Thumb" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-sm font-semibold mb-2 block">Pendidikan</span>
+                            <h3 class="text-lg font-bold text-secondary mb-2 hover:text-primary transition"><a href="#">Perbedaan Universitas, Politeknik, & Institut</a></h3>
+                            <p class="text-slate-500 text-sm mb-4">Bingung pilih kampus? Yuk simak perbedaannya agar tidak salah pilih...</p>
+                            <a href="#" class="text-sm font-medium text-slate-400 hover:text-primary transition flex items-center">Baca Selengkapnya <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="h-48 bg-slate-200">
+                             <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="Blog Thumb" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-primary text-sm font-semibold mb-2 block">Info Sekolah</span>
+                            <h3 class="text-lg font-bold text-secondary mb-2 hover:text-primary transition"><a href="#">15 SMA Terbaik di Surabaya</a></h3>
+                            <p class="text-slate-500 text-sm mb-4">Daftar sekolah unggulan di Surabaya berdasarkan peringkat nasional terbaru.</p>
+                            <a href="#" class="text-sm font-medium text-slate-400 hover:text-primary transition flex items-center">Baca Selengkapnya <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
